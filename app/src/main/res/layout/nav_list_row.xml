@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp" android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgUser"
+        android:src="@drawable/ic_menu_gallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Person&apos;s Name"
+        android:id="@+id/name"
+        android:layout_alignTop="@+id/imgUser"
+        android:layout_toRightOf="@+id/imgUser"
+        android:layout_toEndOf="@+id/imgUser" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="63km"
+        android:id="@+id/distance"
+        android:layout_below="@+id/date_joined"
+        android:layout_alignLeft="@+id/date_joined"
+        android:layout_alignStart="@+id/date_joined" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Joined: Feb 20"
+        android:id="@+id/date_joined"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name" />
+
+</RelativeLayout>
