@@ -1,12 +1,10 @@
 package com.example.adam.navigationproject;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import java.security.Policy;
 import java.util.ArrayList;
 
 /**
@@ -16,8 +14,7 @@ public class CustomAdapter extends BaseAdapter {
     ArrayList<Profile> profiles;
     Context context;
 
-    public CustomAdapter(Context context, ArrayList<Profile> profiles)
-    {
+    public CustomAdapter(Context context, ArrayList<Profile> profiles) {
         this.context = context;
         this.profiles = profiles;
     }
@@ -39,13 +36,13 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null)
-        {
+        if (convertView == null) {
             ProfileCell cell = new ProfileCell(context);
             Profile profile = getItem(position);
             cell.setNameText(profile.name);
             cell.setDateJoinedText(profile.dateJoined);
             cell.setDistanceText(profile.distance);
+            // cell.imageView().setImageResource(R.mipmap.ic_launcher);
             convertView = cell;
         }
 

@@ -21,12 +21,13 @@ public class ProfileCell extends RelativeLayout {
     public ProfileCell(Context context) {
         super(context);
         inflate(context, R.layout.nav_list_row, this);
-        name = (TextView)findViewById(R.id.name);
-        dateJoined = (TextView)findViewById(R.id.date_joined);
-        distance = (TextView)findViewById(R.id.distance);
-        imageView = (ImageView)findViewById(R.id.imgUser);
+        name = (TextView) findViewById(R.id.name);
+        dateJoined = (TextView) findViewById(R.id.date_joined);
+        distance = (TextView) findViewById(R.id.distance);
+        imageView = (ImageView) findViewById(R.id.imgUser);
         imageView.setImageResource(R.mipmap.ic_launcher);
     }
+
     public String getNameText() {
         return nameText;
     }
@@ -39,6 +40,7 @@ public class ProfileCell extends RelativeLayout {
     public ImageView imageView() {
         return imageView;
     }
+
     public String getDateJoinedText() {
         return dateJoinedText;
     }

@@ -2,9 +2,8 @@ package com.example.adam.navigationproject;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -42,20 +42,19 @@ public class NavigationActivity extends AppCompatActivity
         toggle.syncState();
 
         //get listview inside of navigation drawer that you want to put it in
-        ListView listView = (ListView)findViewById(R.id.lstDrawerItems);
+        ListView listView = (ListView) findViewById(R.id.lstDrawerItems);
 
         //can get this from your data source
-        Profile profile = new Profile("Waqas Ahmed Ansari","Date Joined: Feb. 20","63km");
+        Profile profile = new Profile("Waqas Ahmed Ansari", "Date Joined: Feb. 20", "63km");
 
         //A list of data to display in list
         ArrayList<Profile> profiles = new ArrayList<>();
 
-        for (int i = 0; i < 15; i++)
-        {
+        for (int i = 0; i < 15; i++) {
             profiles.add(profile);//Adding same profile over an over
         }
 
-        CustomAdapter adapter = new CustomAdapter(this,profiles);
+        CustomAdapter adapter = new CustomAdapter(this, profiles);
 
         listView.setAdapter(adapter);
 

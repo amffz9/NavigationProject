@@ -6,14 +6,12 @@ package com.example.adam.navigationproject;
 public class Profile {//Information about Users Profile
 
 
-
     public String name;
     public String dateJoined;
     public String distance;
 /////////possibly have image url here ....
 
-    public Profile(String name, String dateJoined, String distance)
-    {
+    public Profile(String name, String dateJoined, String distance) {
         this.name = name;
         this.dateJoined = dateJoined;
         this.distance = distance;
